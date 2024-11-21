@@ -10,13 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     authButton.addEventListener("click", () => {
         modalAuth.style.display = "flex";
-        document.body.style.overflow = "hidden"; // Вимикаємо прокрутку
+        document.body.style.overflow = "hidden";
     });
 
     closeAuthButton.addEventListener("click", closeModal);
 
     modalAuth.addEventListener("click", (event) => {
-        // Якщо клік поза межами форми, закриваємо модальне вікно
         if (event.target === modalAuth) {
             closeModal();
         }
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeModal() {
         modalAuth.style.display = "none";
-        document.body.style.overflow = ""; // Відновлюємо прокрутку
+        document.body.style.overflow = "";
         clearFormStyles();
     }
 
